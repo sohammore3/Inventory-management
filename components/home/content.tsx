@@ -4,11 +4,14 @@ import dynamic from "next/dynamic";
 import { TableWrapper } from "../table/table";
 import { CardBalance1 } from "./card-balance1";
 import { CardBalance2 } from "./card-balance2";
+import { CardBalance3 } from "./card-balance3";
+
 import { CardAgents } from "./card-agents";
 import { CardTransactions } from "./card-transactions";
 import { Link } from "@nextui-org/react";
 import NextLink from "next/link";
 import WarehouseMap from "./WarehouseMap"; // Import the WarehouseMap component
+import { OrderTable } from "../table/ordertable";
 
 const Chart = dynamic(
   () => import("../charts/steam").then((mod) => mod.Steam),
@@ -23,11 +26,10 @@ export const Content = () => (
       <div className="mt-6 gap-6 flex flex-col w-full">
         {/* Card Section Top */}
         <div className="flex flex-col gap-2">
-          <h3 className="text-xl font-semibold">Select the Task</h3>
+          <CardBalance3 />
           <div className="grid md:grid-cols-2 grid-cols-1 2xl:grid-cols-3 gap-5  justify-center w-full">
-            <CardBalance1 />
             <CardBalance2 />
-            {/* <CardBalance3 /> */}
+            <CardBalance1 />
           </div>
         </div>
 
@@ -72,7 +74,8 @@ export const Content = () => (
       <div className="flex flex-wrap justify-between">
         <h3 className="text-center text-xl font-semibold">Maps</h3>
       </div>
-      <WarehouseMap /> {/* Integrate the WarehouseMap component here */}
+      <WarehouseMap />
+      <OrderTable />
     </div>
   </div>
 );

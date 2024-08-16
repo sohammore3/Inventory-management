@@ -19,10 +19,11 @@ interface Company {
 
 export const CompaniesDropdown = () => {
   const [company, setCompany] = useState<Company>({
-    name: "Aissms IOIT",
-    location: "Shivaji Nagar, Pune",
+    name: "Walmart 1",
+    location: "New York, NY",
     logo: <AcmeIcon />,
   });
+
   return (
     <Dropdown
       classNames={{
@@ -47,29 +48,29 @@ export const CompaniesDropdown = () => {
         onAction={(e) => {
           if (e === "1") {
             setCompany({
-              name: "Wadia",
-              location: "Pune",
+              name: "Walmart 1",
+              location: "New York, NY",
               logo: <AcmeIcon />,
             });
           }
           if (e === "2") {
             setCompany({
-              name: "Modern",
-              location: "Pune",
+              name: "Walmart 2",
+              location: "Los Angeles, CA",
               logo: <AcmeLogo />,
             });
           }
           if (e === "3") {
             setCompany({
-              name: "VIIT",
-              location: "Pune",
+              name: "Walmart 3",
+              location: "Chicago, IL",
               logo: <AcmeIcon />,
             });
           }
           if (e === "4") {
             setCompany({
-              name: "AISSMS IOIT",
-              location: "Pune",
+              name: "Walmart 4",
+              location: "Houston, TX",
               logo: <AcmeIcon />,
             });
           }
@@ -80,46 +81,46 @@ export const CompaniesDropdown = () => {
           <DropdownItem
             key="1"
             startContent={<AcmeIcon />}
-            description="Pune"
+            description="New York, NY"
             classNames={{
               base: "py-4",
               title: "text-base font-semibold",
             }}
           >
-            Wadia
+            Walmart 1
           </DropdownItem>
           <DropdownItem
             key="2"
             startContent={<AcmeLogo />}
-            description="Pune"
+            description="Los Angeles, CA"
             classNames={{
               base: "py-4",
               title: "text-base font-semibold",
             }}
           >
-            Modern
+            Walmart 2
           </DropdownItem>
           <DropdownItem
             key="3"
             startContent={<AcmeIcon />}
-            description="Pune"
+            description="Chicago, IL"
             classNames={{
               base: "py-4",
               title: "text-base font-semibold",
             }}
           >
-            VIIT
+            Walmart 3
           </DropdownItem>
           <DropdownItem
             key="4"
             startContent={<AcmeIcon />}
-            description="Pune"
+            description="Houston, TX"
             classNames={{
               base: "py-4",
               title: "text-base font-semibold",
             }}
           >
-            AISSMS IOIT
+            Walmart 4
           </DropdownItem>
         </DropdownSection>
       </DropdownMenu>
